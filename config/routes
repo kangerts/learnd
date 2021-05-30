@@ -1,0 +1,8 @@
+#
+# [GET,POST,PUT...]    path    controller.method
+#
+
+GET   /   index.index
+
+# static resources
+# GET		/attachments				    staticDir:attachments:true

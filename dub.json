@@ -1,0 +1,11 @@
+{
+    "copyright": "Copyright (c) 2015-2021 HuntLabs",
+    "dependencies": {
+        "hunt-framework": "~>3.4.3"
+    },
+    "description": "An application based on Hunt Framework.",
+    "homepage": "https://www.huntlabs.net",
+    "license": "Apache-2.0",
+    "name": "server",
+    "targetType": "executable"
+}
