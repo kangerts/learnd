@@ -7,7 +7,7 @@ import std;
 /**
 * 首页控制器
 */
-public  class IndexController : Controller
+public class IndexController : Controller
 {
     mixin MakeController;
 
