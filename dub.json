@@ -1,9 +1,10 @@
 {
-	"authors": [
-		"kangert"
-	],
-	"copyright": "Copyright © 2021, kangert",
-	"description": "A minimal D application.",
-	"license": "proprietary",
-	"name": "learnd"
+    "authors": [
+        "kangert"
+    ],
+    "copyright": "Copyright © 2021, kangert",
+    "description": "A minimal D application.",
+    "license": "proprietary",
+    "name": "learnd",
+    "targetType": "executable"
 }
