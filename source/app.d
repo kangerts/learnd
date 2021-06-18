@@ -6,6 +6,10 @@ import std.outbuffer : OutBuffer;
 import std.file : write, readText;
 import std.json : JSONValue, toJSON;
 import std.path : absolutePath, dirSeparator;
+import hunt.io.BufferUtils;
+import hunt.io.ByteBuffer;
+
+import hunt.util.ByteOrder;
 
 void main()
 {
@@ -35,6 +39,16 @@ void main()
     OutBuffer buf = new OutBuffer();
     buf.write(js.toString());
     write(filePath, buf.toBytes());
+
+    uint packLength = 4 + 4 + 4096;
+    // 创建buffer 封装自定义数据包
+    ByteBuffer byteBuf = new BufferUtils().allocate(8).order(ByteOrder.LittleEndian);
+    byteBuf.putInt(3213);
+    writeln(byteBuf.array());
+
+    // 读的时候重置下标
+    byteBuf.rewind();
+    writeln(byteBuf.getInt());
 }
 
 /** 

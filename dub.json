@@ -7,5 +7,8 @@
     "license": "proprietary",
     "name": "learnd",
     "targetType": "executable",
-    "targetPath": "./build"
+    "targetPath": "./build",
+    "dependencies": {
+        "hunt": "~>1.7.8"
+    }
 }
