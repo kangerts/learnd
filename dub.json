@@ -6,5 +6,6 @@
     "description": "A minimal D application.",
     "license": "proprietary",
     "name": "learnd",
-    "targetType": "executable"
+    "targetType": "executable",
+    "targetPath": "./build"
 }
