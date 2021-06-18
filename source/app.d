@@ -5,6 +5,7 @@ import std.conv : to;
 import std.outbuffer : OutBuffer;
 import std.file : write, readText;
 import std.json : JSONValue, toJSON;
+import std.path : absolutePath, dirSeparator;
 
 void main()
 {
@@ -15,7 +16,7 @@ void main()
     auto aa = getFullPath(ptr_string);
     writeln(aa);
 
-    string filePath = "./build/test.txt";
+    string filePath = absolutePath("build") ~ dirSeparator ~ "test.txt";
     // 写文件
     OutBuffer outBuffer = new OutBuffer();
     outBuffer.writefln("kdakdkakdadkcmkm\n\n");
