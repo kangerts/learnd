@@ -42,15 +42,16 @@ void main()
 
     uint packLength = 4 + 4 + 4096;
     // 创建buffer 封装自定义数据包
-    ByteBuffer byteBuf = new BufferUtils().allocate(8).order(ByteOrder.LittleEndian);
+    ByteBuffer byteBuf = new BufferUtils().allocate(packLength).order(ByteOrder.LittleEndian);
     byteBuf.putInt(3213);
     byteBuf.putInt(1891);
-    writeln(byteBuf.array());
 
     // 读的时候重置下标
     byteBuf.rewind();
     writeln(byteBuf.getInt());
     writeln(byteBuf.getInt());
+
+    writeln(new A1().getAge());
 }
 
 /** 
@@ -60,4 +61,20 @@ string getFullPath(string* path)
 {
     string a = *path ~ "\t哈哈哈哈哈";
     return a;
+}
+
+class Super
+{
+    int getAge()
+    {
+        return 11;
+    }
+}
+
+class A1 : Super
+{
+    override int getAge()
+    {
+        return 22;
+    }
 }
