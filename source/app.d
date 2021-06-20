@@ -40,7 +40,7 @@ void main()
     buf.write(js.toString());
     write(filePath, buf.toBytes());
 
-    uint packLength = 4 + 4 + 4096;
+    const uint packLength = 4 + 4 + 4096;
     // 创建buffer 封装自定义数据包
     ByteBuffer byteBuf = new BufferUtils().allocate(packLength).order(ByteOrder.LittleEndian);
     byteBuf.putInt(3213);
