@@ -4,7 +4,7 @@ import std.stdio;
 import std.conv : to;
 import std.outbuffer : OutBuffer;
 import std.file : write, readText;
-import std.json : JSONValue, toJSON;
+import std.json : JSONValue, toJSON, parseJSON;
 import std.path : absolutePath, dirSeparator;
 import hunt.io.BufferUtils;
 import hunt.io.ByteBuffer;
@@ -52,6 +52,11 @@ void main()
     writeln(byteBuf.getInt());
 
     writeln(new A1().getAge());
+
+    // 读取json文件
+    JSONValue data = parseJSON(readText(filePath));
+    immutable uint age = to!uint(data.opIndex("age").toString());
+    writeln(age + 5);
 }
 
 /** 
