@@ -12,3 +12,4 @@ dub.*.sdl
 *.dll
 .idea
 *.iml
+build/*
