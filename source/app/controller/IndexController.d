@@ -3,11 +3,12 @@ module app.controller.IndexController;
 import hunt.framework;
 import app.services.impl.TestServiceImpl;
 import std;
+import std.conv : to;
 
 /**
 * 首页控制器
 */
-public class IndexController : Controller
+class IndexController : Controller
 {
     mixin MakeController;
 
@@ -19,6 +20,6 @@ public class IndexController : Controller
         // writeln(test.getAll());
         JSONValue json = JSONValue();
         json["serverVersion"] = "v1.0";
-        return json.toString;
+        return json.toString();
     }
 }

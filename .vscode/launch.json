@@ -6,10 +6,10 @@
     "configurations": [
         
         {
-            "name": "(Windows) 启动",
+            "name": "Debug",
             "type": "cppvsdbg",
             "request": "launch",
-            "program": " ${workspaceFolder}/server.exe",
+            "program": " ${workspaceFolder}/server",
             "args": [],
             "stopAtEntry": false,
             "cwd": "${fileDirname}",
