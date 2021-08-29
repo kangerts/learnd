@@ -9,6 +9,6 @@
     "targetType": "executable",
     "targetPath": "./build",
     "dependencies": {
-        "hunt": "~>1.7.8"
+        "hunt": "~>1.7.11"
     }
 }
