@@ -1,14 +1,13 @@
 {
-    "authors": [
-        "kangert"
-    ],
-    "copyright": "Copyright © 2021, kangert",
-    "description": "A minimal D application.",
-    "license": "proprietary",
-    "name": "learnd",
-    "targetType": "executable",
-    "targetPath": "./build",
+    "copyright": "Copyright (c) 2015-2021 HuntLabs",
     "dependencies": {
-        "hunt": "~>1.7.11"
-    }
+        "hunt-framework": "~>3.4.6-rc.2"
+    },
+    "description": "An application based on Hunt Framework.",
+    "homepage": "https://www.huntlabs.net",
+    "license": "Apache-2.0",
+    "name": "server",
+    "targetPath": "./build",
+    "copyFiles": ["./config"],
+    "targetType": "executable"
 }
