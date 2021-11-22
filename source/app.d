@@ -6,7 +6,7 @@ import std.outbuffer : OutBuffer;
 import std.file : write, readText;
 import std.json : JSONValue, toJSON, parseJSON;
 import std.path : absolutePath, dirSeparator;
-import std.process:executeShell;
+import std.process : executeShell;
 
 import hunt.io.BufferUtils;
 import hunt.io.ByteBuffer;
