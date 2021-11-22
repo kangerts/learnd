@@ -6,6 +6,8 @@ import std.outbuffer : OutBuffer;
 import std.file : write, readText;
 import std.json : JSONValue, toJSON, parseJSON;
 import std.path : absolutePath, dirSeparator;
+import std.process:executeShell;
+
 import hunt.io.BufferUtils;
 import hunt.io.ByteBuffer;
 
@@ -13,11 +15,12 @@ import hunt.util.ByteOrder;
 
 void main()
 {
+    executeShell("chcp 65001");
     /** 获取当前文件绝对路径 */
     string path = to!string(__FILE_FULL_PATH__);
     string* ptr_string = null;
     ptr_string = &path;
-    auto aa = getFullPath(ptr_string);
+    string aa = getFullPath(ptr_string);
     writeln(aa);
 
     string filePath = absolutePath("build") ~ dirSeparator ~ "test.txt";
