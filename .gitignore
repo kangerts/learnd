@@ -8,8 +8,7 @@ __dummy.html
 dub.selections.json
 dub.userprefs
 dub.*.sdl
+hunt-skeleton-*
 *.exe
-*.dll
 .idea
 *.iml
-build/*
