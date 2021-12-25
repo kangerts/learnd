@@ -12,3 +12,4 @@ hunt-skeleton-*
 *.exe
 .idea
 *.iml
+build
