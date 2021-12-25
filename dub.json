@@ -9,5 +9,6 @@
     "name": "hunt-skeleton",
     "targetType": "executable",
     "targetPath": "./build",
-    "targetName": "server"
+    "targetName": "server",
+    "copyFiles": ["./config", "./resources", "./wwwroot"]
 }
